@@ -7,9 +7,6 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
     const emailInput = document.getElementById("email").value
     const nameInput = document.getElementById("name").value
     const stateInput = document.getElementById("state").value
-/*         alert("Email: " + emailInput)
-    alert("Name: " + nameInput)
-    alert("State: " + stateInput) */
 
     if (!emailInput.includes("@")) {
         alert("Please enter a valid email address")
@@ -27,3 +24,11 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
     }
 
 })
+
+const fetchSignatures = async () => {
+    const response = await fetch("http://localhost:5000/api/signatures")
+    const signatures = await response.json()
+    console.log("\n\nprinting signatures\n\n")
+    console.log(signatures)
+}
+fetchSignatures()
