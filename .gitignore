@@ -1,1 +1,12 @@
-node_modules
+node_modules/
+
+.env
+
+# Ignore SQLite database
+database.sqlite
+*.sqlite3
+*.db
+
+# only necessary if using Sequelize migrations
+migrations/
+seeders/
