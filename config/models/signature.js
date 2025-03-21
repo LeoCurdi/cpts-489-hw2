@@ -8,11 +8,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    message: {
+    city: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    signature: {
+    state: {
       type: DataTypes.STRING,
       allowNull: false,
     },

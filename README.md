@@ -12,8 +12,8 @@ npx nodemon server.js
 # Run the production server
 node server.js
 
-# Create a new Sequelize model (replace ModelName and attributes)
-npx sequelize-cli model:generate --name ModelName --attributes field1:string,field2:integer
+# Create a new Sequelize model
+npx sequelize-cli model:generate --name signature --attributes name:string,email:string,city:string,state:string
 
 # Run database seeders (if applicable)
 npx sequelize-cli db:seed:all
