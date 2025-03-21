@@ -48,7 +48,7 @@ document.getElementById("myForm").addEventListener("submit", async function(even
 
     // If the server responds with a 200 status code, the data was successfully stored
     if (response.status === 200) {
-        alert("Thank you for signing the petition!")
+        //alert("Thank you for signing the petition!")
         updateSignaturesList()
     }
     else {
