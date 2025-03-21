@@ -67,13 +67,7 @@ const fetchSignatures = async () => {
 const updateSignaturesList = async () => {
     const updatedSignatures = await fetchSignatures()
     const frontendSignatures = document.getElementById("signaturesList")
-    frontendSignatures.innerHTML = `                
-        <div class="grid grid-cols-3">
-            <div class="border py-2 px-2 font-bold py-2">name</div>
-            <div class="border py-2 px-2 font-bold">City</div>
-            <div class="border py-2 px-2 font-bold">State</div>
-        </div>
-    ` // start by clearing the front end
+    frontendSignatures.innerHTML = "" // start by clearing the front end
 
     // Add each signature to the front end
     updatedSignatures.forEach((signature, i) => {
