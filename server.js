@@ -5,6 +5,8 @@ const db = require("./models")
 const routes = require("./routes/routes");
 
 const app = express();
+const PORT = 4000
+
 app.use(cors());
 app.use(express.json());
 app.use("/api/signatures", routes);
@@ -20,7 +22,6 @@ app.get("*", (req, res) => {
 }); 
 
 // Sync up the database and start the server
-const PORT = process.env.PORT || 5000;
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

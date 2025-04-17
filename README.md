@@ -1,11 +1,12 @@
 # cpts-489-hw2
 
-# Install dependencies
+# Run the production server (port 4000)
+open terminal in root directory
 npm install
-
-# Run the production server
 node server.js
-(or: npx nodemon server.js)
 
-# Open the front-end app
-go to the root directory and open petition.html in web browser
+# Run the front end react app (port 3000)
+open new terminal in root directory
+cd react-spa
+npm install
+npm start
